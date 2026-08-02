@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - name: make TESTOPTS=--windows
       run: make TESTOPTS=--windows
       working-directory: ./src
@@ -39,12 +39,12 @@ jobs:
     - name: powershell Compress-Archive test results/build-windows-test.zip
       run: powershell Compress-Archive test results/build-windows-test.zip
     - name: Upload src folder for job 1
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: build-windows-src.zip
         path: results/build-windows-src.zip
     - name: Upload test folder for job 1
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: build-windows-test.zip
         path: results/build-windows-test.zip

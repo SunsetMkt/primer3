@@ -99,14 +99,6 @@ static int    parse_seq_quality(char *, seq_args *);
 static const char *pr_program_name = "TMP";
 
 /* 
- * Hack to support old SunOS headers.  (We do not try to declare _all_
- * undeclared functions; only those with non-int return types.)
- */
-#ifndef __cplusplus
-extern double strtod();
-#endif
-
-/* 
  * See read_boulder.h for description.
  */
 #define COMPARE(TAG) (!strncmp(s, TAG, tag_len) \
